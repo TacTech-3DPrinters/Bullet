@@ -1,3 +1,0 @@
-[submodule "control-board/Marlin"]
-	path = control-board/Marlin
-	url = git@github.com:MarlinFirmware/Marlin.git
