@@ -4,7 +4,7 @@ Bullet is a heavily modified Ender3. All mods and software is tracked on this re
 
 
 ## Firmware
-Bullet runs Marlin 2.1.0 (as of July 10th 2021). It was running an older version 2.0.7.2, which was the stock preconfigured version from BigTreeTech.
+Bullet runs Marlin 2.0.7.2, which was the stock preconfigured version from BigTreeTech.
 
 ### Compiling Instructions
 

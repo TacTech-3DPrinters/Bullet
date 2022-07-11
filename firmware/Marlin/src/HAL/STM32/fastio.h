@@ -38,7 +38,6 @@ extern GPIO_TypeDef * FastIOPortMap[];
 // ------------------------
 
 void FastIO_init(); // Must be called before using fast io macros
-#define FASTIO_INIT() FastIO_init()
 
 // ------------------------
 // Defines
@@ -52,15 +51,15 @@ void FastIO_init(); // Must be called before using fast io macros
 
 #if defined(STM32F0xx) || defined(STM32F1xx) || defined(STM32F3xx) || defined(STM32L0xx) || defined(STM32L4xx)
   #define _WRITE(IO, V) do { \
-    if (V) FastIOPortMap[STM_PORT(digitalPinToPinName(IO))]->BSRR = _BV32(STM_PIN(digitalPinToPinName(IO))) ; \
-    else   FastIOPortMap[STM_PORT(digitalPinToPinName(IO))]->BRR  = _BV32(STM_PIN(digitalPinToPinName(IO))) ; \
+    if (V) FastIOPortMap[STM_PORT(digitalPin[IO])]->BSRR = _BV32(STM_PIN(digitalPin[IO])) ; \
+    else   FastIOPortMap[STM_PORT(digitalPin[IO])]->BRR  = _BV32(STM_PIN(digitalPin[IO])) ; \
   }while(0)
 #else
-  #define _WRITE(IO, V) (FastIOPortMap[STM_PORT(digitalPinToPinName(IO))]->BSRR = _BV32(STM_PIN(digitalPinToPinName(IO)) + ((V) ? 0 : 16)))
+  #define _WRITE(IO, V) (FastIOPortMap[STM_PORT(digitalPin[IO])]->BSRR = _BV32(STM_PIN(digitalPin[IO]) + ((V) ? 0 : 16)))
 #endif
 
-#define _READ(IO)               bool(READ_BIT(FastIOPortMap[STM_PORT(digitalPinToPinName(IO))]->IDR, _BV32(STM_PIN(digitalPinToPinName(IO)))))
-#define _TOGGLE(IO)             TBI32(FastIOPortMap[STM_PORT(digitalPinToPinName(IO))]->ODR, STM_PIN(digitalPinToPinName(IO)))
+#define _READ(IO)               bool(READ_BIT(FastIOPortMap[STM_PORT(digitalPin[IO])]->IDR, _BV32(STM_PIN(digitalPin[IO]))))
+#define _TOGGLE(IO)             (FastIOPortMap[STM_PORT(digitalPin[IO])]->ODR ^= _BV32(STM_PIN(digitalPin[IO])))
 
 #define _GET_MODE(IO)
 #define _SET_MODE(IO,M)         pinMode(IO, M)
