@@ -88,6 +88,7 @@ Source: https://core-electronics.com.au/guides/stress-testing-your-raspberry-pi/
 * CANBUS board + RPI Hat instructions: https://www.youtube.com/watch?v=jgE3XMM9PBk
 * Updating klipper on MCU automatically with a script: https://www.youtube.com/watch?v=uNW8phiV83w
 * Voron Design documentation for skr mini e3 v1.2: https://docs.vorondesign.com/build/software/miniE3_v12_klipper.html
+* Debugging CANBus communication issues: https://www.teamfdm.com/forums/topic/1524-debugging-canbus-and-communication-timeout-while-homingbytes_invalid/
 
 ### Board Documentation
 
