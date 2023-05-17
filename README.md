@@ -4,6 +4,15 @@ Bullet is a heavily modified Ender3. All mods and software is tracked on this re
 
 Bullet runs Klipper now! It also has two different control boards - the main control board, which is an SKR Mini E3 V1.2 and a toolhead control board connected over CAN, which is a BIQU EBB42. Here are the compiling + deployment instructions moving forward.
 
+## Getting Started
+
+This repo contains all the configs needed for Bullet to run and compile Klipper. Here are the instructions to get started (which may be upgraded to a script in the future:
+``` bash
+rm -rf $HOME/printer_data/config
+ln -s $HOME/Bullet/klipper-configs $HOME/printer_data/config
+```
+Also will need to re-setup the CAN connection. See https://maz0r.github.io/klipper_canbus/controller/rs485.html
+
 ## Main Control Board - SKR Mini E3 V1.2
 
 ### Building and Deploying Manually
