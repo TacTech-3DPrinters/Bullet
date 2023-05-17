@@ -89,6 +89,10 @@ Source: https://core-electronics.com.au/guides/stress-testing-your-raspberry-pi/
 * Debugging CANBus communication issues: https://www.teamfdm.com/forums/topic/1524-debugging-canbus-and-communication-timeout-while-homingbytes_invalid/
 * Sweet KlackEnder probe macros: https://github.com/Harrypulvirenti/Klack-Probe-Macros/tree/main
 
+### Calibrating the 3D Printer
+* Preflight checklist: https://github.com/Klipper3d/klipper/blob/master/docs/Config_checks.md
+* 
+
 ### Board Documentation
 
 * [BigTreeTech SKR E3 Mini V1.2 documentation](https://github.com/bigtreetech/BIGTREETECH-SKR-mini-E3), also found in `control-board/BTT_SKR_MINI_E3_V1_2`
